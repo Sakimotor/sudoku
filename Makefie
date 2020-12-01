@@ -1,0 +1,29 @@
+# LE BUT FINAL
+
+but : run
+
+# LES VARIABLES DONC LE JAVAC ET LES .CLASS
+
+JC = javac -implicit:none
+.SUFFIXES : .java .class
+jav: $(JC) 
+
+CLASS = Programme.java \
+		Menu.java \
+		Fenetrejeu.java \
+		FenetreEditeur.java \
+		Algorithme.java \
+		Actions.java \
+		Boutons.java \
+		Affichage.java \
+		Ecriture.java \
+		Lecture.java
+
+
+default : class
+Programme.class: 
+		$(jav) $(CLASS)
+
+
+
+clean: $(RM) *.class
